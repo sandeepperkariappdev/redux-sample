@@ -107,7 +107,9 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
     d. create another file called types.js inside actions
 --------------------------------------
 --------------------------------------
-19. 
+19. Write Types for the APP in the actions/types.js file
+--------------------------------------
+--------------------------------------
 
 
 
