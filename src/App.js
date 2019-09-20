@@ -8,13 +8,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      errorText : ''
     }
   }
 
   onTextChange = (e) => {
-     const name = e.target.name;
-     const value = e.target.value;
+     const { name, value } = e.target;     
     this.setState((prevState, prevProps)=>{
       // below is incorrect way of wrting, it will throw error- learn why?
       //return {[e.target.value]: e.target.value}
@@ -22,10 +22,25 @@ class App extends React.Component {
     })
   }
 
+  isValid = () =>{
+    const { username, password } = this.state;
+    if(username.length === 0 || password.length === 0){
+        this.setState({errorText:'Enter Username and Password before hititng submit button'});
+      return false;
+    }
+    if(username.indexOf('@gmail.com') !== -1 || username.indexOf('@rsrit.com')){
+      this.setState({errorText:'Should be an email from Gmail or Rsrit'});
+    return false;
+  }
+    return true;
+  }
+
   handleSubmit = e => {
-    e.preventDefault();    
-    console.log(" username : "+this.state.username);
-    console.log(" password : "+this.state.password);
+    e.preventDefault();   
+    if(this.isValid()){
+      console.log(" username : "+this.state.username);
+      console.log(" password : "+this.state.password);
+    }  
 };
   render(){
     return (

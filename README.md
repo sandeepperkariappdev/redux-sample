@@ -70,13 +70,23 @@ e. Hit Empty Cache and Hard Reload to see the changes in the browser
 
 refer to git commit
 
+https://github.com/sandeepperkariappdev/redux-sample/commit/37bc5e4b8371a4070faf686d33bf409844f1be9b
 
 --------------------------------------
 --------------------------------------
 
 
-16. 
+16. Add validation to the Login screen Inptu fields
 
+
+https://codeburst.io/how-to-use-html5-form-validations-with-react-4052eda9a1d4
+
+Refer Formik for another way fo additing validations
+https://jaredpalmer.com/formik/docs/overview?source=post_page-----4052eda9a1d4----------------------
+
+
+--------------------------------------
+--------------------------------------
 
 
 Interview Questions
@@ -94,6 +104,7 @@ Interview Questions
     b. 
 
 
-
+6. why do we write e.preventDefault();  for the functions.
+7. 
 
 
