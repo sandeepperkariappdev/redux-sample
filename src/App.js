@@ -3,13 +3,21 @@ import logo from './logo.svg';
 import { Form, Input, Tooltip, Button, Select, Checkbox, Icon } from "antd";
 import './App.css';
 
+const ErrorValidationLabel = ({ txtLbl }) => (    
+  <label htmlFor="" style={{ color: "red", display:"block" }}>
+      {txtLbl}
+  </label>    
+);
+
+
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       username: '',
       password: '',
-      errorText : ''
+      errorText : '',
+      isValid:true
     }
   }
 
@@ -25,11 +33,11 @@ class App extends React.Component {
   isValid = () =>{
     const { username, password } = this.state;
     if(username.length === 0 || password.length === 0){
-        this.setState({errorText:'Enter Username and Password before hititng submit button'});
+        this.setState({ isValid:false, errorText:'Enter Username and Password before hititng submit button'});
       return false;
     }
     if(username.indexOf('@gmail.com') !== -1 || username.indexOf('@rsrit.com')){
-      this.setState({errorText:'Should be an email from Gmail or Rsrit'});
+      this.setState({ isValid:false, errorText:'Should be an email from Gmail or Rsrit'});
     return false;
   }
     return true;
@@ -43,6 +51,8 @@ class App extends React.Component {
     }  
 };
   render(){
+    const { username, password, errorText, isValid } = this.state;
+    const renderValidationError = isValid ? "" : <ErrorValidationLabel txtLbl={errorText} />;
     return (
       <div className="App">
         <Form>
@@ -60,6 +70,7 @@ class App extends React.Component {
           />
         <Input.Password name="password" onChange={this.onTextChange} value={this.state.password} placeholder="input password" />
         <Button type="primary" onClick={this.handleSubmit}>Login</Button>
+        {renderValidationError}
         </Form>
       </div>
     );

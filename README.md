@@ -88,6 +88,20 @@ https://jaredpalmer.com/formik/docs/overview?source=post_page-----4052eda9a1d4--
 --------------------------------------
 --------------------------------------
 
+17. Show Error message for the failed validations
+
+    a. create a func component to show the error messages
+    b. Add a new state property to show the component
+    c. create a conditional statement to show the Erro Component.
+
+--------------------------------------
+--------------------------------------
+
+18. 
+
+
+
+
 
 Interview Questions
 
