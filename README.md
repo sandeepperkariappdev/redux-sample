@@ -11,6 +11,7 @@
 --------------------------------------
 6. Goto src/App.js file, lets change the existing functional component to class component. (Before proceding further learn the diff between functional and class components and hwy do we use class components in place of functional components)
 https://github.com/sandeepperkariappdev/redux-sample/commit/a8f10abe80321bf2d5f6aaa8c0394c8a7fcb49e3
+
 --------------------------------------
 --------------------------------------
 7. Goto src/App.js file, Now lets create a login Component, Add Input fields username, password and a login button. lets add ant-desing to design the screens. 
@@ -92,12 +93,22 @@ https://jaredpalmer.com/formik/docs/overview?source=post_page-----4052eda9a1d4--
 
     a. create a func component to show the error messages
     b. Add a new state property to show the component
-    c. create a conditional statement to show the Erro Component.
+    c. create a conditional statement to show the Error Component.
+
+https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92c83b3baa6460e00a3b04
 
 --------------------------------------
 --------------------------------------
 
-18. 
+18. Now lets start with Redux, since we initally installed the redux dependencies, 
+    a. create a redux folder
+    b. Create 3 folder inside the redux folder, i. actions ii. reducers iii. store
+    c. Create index.js files inside each of the 3 folders create in the above step
+    d. create another file called types.js inside actions
+--------------------------------------
+--------------------------------------
+19. 
+
 
 
 
