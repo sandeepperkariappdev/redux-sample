@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Form, Input, Tooltip, Button, Select, Checkbox, Icon } from "antd";
 import './App.css';
 
 class App extends React.Component {
@@ -9,9 +10,20 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <header className="App-header">
-          Hello
-        </header>
+        <Form>
+        <Input
+            placeholder="Enter your username"
+            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+            suffix={
+              <Tooltip title="Extra information">
+                <Icon type="info-circle" style={{ color: 'rgba(0,0,0,.45)' }} />
+              </Tooltip>
+            }
+          />
+        <Input.Password placeholder="input password" />
+        <Button type="primary">Primary</Button>
+        </Form>
+
       </div>
     );
   }  
