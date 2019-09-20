@@ -66,16 +66,33 @@ e. Hit Empty Cache and Hard Reload to see the changes in the browser
 --------------------------------------
 --------------------------------------
 
-15.  
+15.  lets add functionality to our Input fields, create handleSubmit button to get called when we hit the login button, create another function to reset the state for the input fields, lets create a component "state" in the "constructor", in the latest versions of react, we can create "state" with no "constructor" created. 
 
+refer to git commit
+
+
+--------------------------------------
+--------------------------------------
+
+
+16. 
 
 
 
 Interview Questions
 
-What does export default do?
-Diff between yarn and npm?
-Diff between Functional and Class Components, scenarions where we use each fo them
+1. What does export default do?
+2. Diff between yarn and npm?
+3. Diff between Functional and Class Components, 
+
+    a) Functional component is a stateless component. It has only props. But class component has state and props.
+    b) Functional component has not any component lifecycle like componentDidMount etc. but class component has Component Lifecycle.
+
+4. scenarions where we use each fo them
+5. what the different ways to use the setState 
+    a. this.setState({[name]:value})
+    b. 
+
 
 
 
