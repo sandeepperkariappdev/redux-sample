@@ -124,8 +124,13 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
     c. Import the types, create a "state" object for the login screen. the "state" in reducers is callled applicatoin "state", the "state" we create inside the login component is called "component state".
     d. create a function to return the "state" object form the reducer/login.js
     e. The funciton will return the default "state" object that we created at step c, the "state" object will be modified when the action is called
+    f. Create and return the "reducers" from the reducers/index.js file, here we will combine the reducers from all the reducers files in the reducers folder.
 --------------------------------------
 --------------------------------------
+22. STORE: Creating a store for the app
+    a. Import the createStore function from the redux.
+    b. Import the "reducers" from the reducers/index.js files. Store will contain the data of the app, we have the data in the "state" object present in the "reducers". so we will create the "store" from the "reducers".
+    c. 
 
 
 
