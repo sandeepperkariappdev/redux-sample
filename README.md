@@ -130,7 +130,23 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
 22. STORE: Creating a store for the app
     a. Import the createStore function from the redux.
     b. Import the "reducers" from the reducers/index.js files. Store will contain the data of the app, we have the data in the "state" object present in the "reducers". so we will create the "store" from the "reducers".
+    c. create the "store" and export the "store" from the file.
+--------------------------------------
+--------------------------------------
+23. SAGAS(MIDDLEWARE) : Adding the SAGA middle ware
+    a. create a file inside the store folder by name "sagas", store/sagas.js
+    b. import the effects and types to the file.
+    c. Write a function to export the "rootsaga" from the file.
+    d. Write another function(fetch) to make the services call to login the user.
+--------------------------------------
+--------------------------------------
+24. SERVICE CALLS: Making services calls and consuming the data.
+
+    a. Create a file to make the service calls. create a folder redux/service/index.js 
+    b. Write the function for GET/POSt/DELETE service calls.
     c. 
+
+
 
 
 
