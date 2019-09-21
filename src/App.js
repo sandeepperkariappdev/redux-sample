@@ -51,6 +51,11 @@ class App extends React.Component {
       console.log(" password : "+this.state.password);
     }  
 };
+  static getDerivedStateFromProps(newProps, prevState) {
+    console.log(newProps.result);
+
+    return null;
+  }
   render(){
     const { username, password, errorText, isValid } = this.state;
     const renderValidationError = isValid ? "" : <ErrorValidationLabel txtLbl={errorText} />;

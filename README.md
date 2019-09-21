@@ -36,18 +36,18 @@ c. To use Button refer: https://ant.design/components/button/
 
 --------------------------------------
 --------------------------------------
-11. Go to src/App.js, Import Form, Input, Button and create the username, password, Login butotn fields. Refer the antd on how to use them.
+11. Go to src/App.js, Import Form, Input, Button and create the username, password, Login butotn fields. 
+    Refer the antd on how to use them.
 
-
-
-Note: when we have a form element, if we define a onSubmit function on the form, we can avoid having a onClick function on a Button element, we can use the onSubmit button on the form or we have the onLCick funciotn on the button and avoid onSubmit on the form.
+    Note: when we have a form element, if we define a onSubmit function on the form, we can avoid having a onClick function on a Button element, we can use the onSubmit button on the form or we have the onLCick funciotn on the button and avoid onSubmit on the form.
 --------------------------------------
 --------------------------------------
 12. Reload the app to check the UI, Use your css skills to align the content at the center of the page, horizontally and vertically.
 --------------------------------------
 --------------------------------------
-13. We notice that the UI doesnot look like as in the website as we didnot import the ant dsign css file. add the below line in the src/index.js file
-import 'antd/dist/antd.css';
+13. We notice that the UI doesnot look like as in the website as we didnot import the ant dsign css file. 
+    add the below line in the src/ index.js file
+    import 'antd/dist/antd.css';
 --------------------------------------
 --------------------------------------
 14. Lets write the css classes to the elements align the Input fields correctly. learn about CSS units before proceeding further. 
@@ -149,7 +149,10 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
     f. The data that we put in to "props" will be available from the "getDerivedStateFromProps" function.
 --------------------------------------
 --------------------------------------
-27.  
+27. UPDATE COMPONENT WITH DATA FROM REDUX
+    a. In the App Component, file src/App.js, write the life cycle events to consume the data from the redux.
+    b. Write the  "getDerivedStateFromProps" the return value from this function will update the component "state". 
+    c. The data in the component "state" can be used in the render function.
 
 
 
