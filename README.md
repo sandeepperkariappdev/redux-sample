@@ -100,16 +100,33 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
 --------------------------------------
 --------------------------------------
 
-18. Now lets start with Redux, since we initally installed the redux dependencies, 
+18. REDUX: Now lets start with Redux, since we initally installed the redux dependencies, 
     a. create a redux folder
     b. Create 3 folder inside the redux folder, i. actions ii. reducers iii. store
     c. Create index.js files inside each of the 3 folders create in the above step
     d. create another file called types.js inside actions
 --------------------------------------
 --------------------------------------
-19. Write Types for the APP in the actions/types.js file
+19. TYPES: Write Types for the APP in the actions/types.js file
 --------------------------------------
 --------------------------------------
+20. ACTIONS : Write the actions for the App, 
+    Actions are the functions that adds the further functionality to the app
+    Go to actions/index.js, add LoginUser Action, actions return an object, once the object is returned, reducers file will be called automatically by redux library. 
+    Import types to the action/index.js file
+--------------------------------------
+--------------------------------------
+21. REDUCERS: Write the reducer functions for the App
+    Reducers will have the logic and global "state" of the App.
+    a. Since we want to write reducers for the login Compoenent, lets create a file called login.js in the reducers folder
+    reducers/login.js
+    b. Lets create a "state" for the login component inside the reducers/login.js file.
+    c. Import the types, create a "state" object for the login screen. the "state" in reducers is callled applicatoin "state", the "state" we create inside the login component is called "component state".
+    d. create a function to return the "state" object form the reducer/login.js
+    e. The funciton will return the default "state" object that we created at step c, the "state" object will be modified when the action is called
+--------------------------------------
+--------------------------------------
+
 
 
 

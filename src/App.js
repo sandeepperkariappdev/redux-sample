@@ -36,7 +36,7 @@ class App extends React.Component {
         this.setState({ isValid:false, errorText:'Enter Username and Password before hititng submit button'});
       return false;
     }
-    if(username.indexOf('@gmail.com') !== -1 || username.indexOf('@rsrit.com')){
+    if(username.indexOf('@gmail.com') !== -1 || username.indexOf('@rsrit.com') !== -1 ){
       this.setState({ isValid:false, errorText:'Should be an email from Gmail or Rsrit'});
     return false;
   }
