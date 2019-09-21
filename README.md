@@ -150,7 +150,14 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
     d. In the sagas file, in the fetch function we make the service calls, once the data is returned from the service we send the data to the reducers by dispatching an action. 
 --------------------------------------
 --------------------------------------    
-25.     
+25. UPDATING REDUCERS TO CONSUME SERVICE RESPONSE : 
+    a. In the fetch function in the Sagas file, server response will be dispatched by actions using the types and effects from sagas. the dispatched actions will be consumed in the reducers to update the store. 
+    b. Go to the reducers/login.js file to create functions for types, Login Success and Login Error.
+    c. Write the handler functions to update the "state" object in the reducers.
+--------------------------------------
+--------------------------------------   
+26.
+
 
 
 
