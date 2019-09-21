@@ -138,13 +138,19 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
     b. import the effects and types to the file.
     c. Write a function to export the "rootsaga" from the file.
     d. Write another function(fetch) to make the services call to login the user.
+    e. fetch function uses the funciton imported form the service file  that will be create on step 24. 
+    f. fetch function uses types to dipatch the response returned from the service call.    
 --------------------------------------
 --------------------------------------
 24. SERVICE CALLS: Making services calls and consuming the data.
-
+    PREREQUISITE : learn about sagas effects, that we are going to use in the sagas file.
     a. Create a file to make the service calls. create a folder redux/service/index.js 
     b. Write the function for GET/POSt/DELETE service calls.
-    c. 
+    c. Make reference to the service methods in the sagas file
+    d. In the sagas file, in the fetch function we make the service calls, once the data is returned from the service we send the data to the reducers by dispatching an action. 
+--------------------------------------
+--------------------------------------    
+25.     
 
 
 
