@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import logo from './logo.svg';
 import { Form, Input, Tooltip, Button, Select, Checkbox, Icon } from "antd";
 import './App.css';
+import {loginUser} from './redux/actions/index';
+
 
 const ErrorValidationLabel = ({ txtLbl }) => (    
   <label htmlFor="" style={{ color: "red", display:"block" }}>
@@ -18,7 +20,8 @@ class App extends React.Component {
       username: '',
       password: '',
       errorText : '',
-      isValid:true
+      isValid:true,
+      result:''
     }
   }
 
@@ -37,23 +40,24 @@ class App extends React.Component {
         this.setState({ isValid:false, errorText:'Enter Username and Password before hititng submit button'});
       return false;
     }
-    if(username.indexOf('@gmail.com') !== -1 || username.indexOf('@rsrit.com') !== -1 ){
+    if(username.indexOf('@gmail.com') === -1 && username.indexOf('@rsrit.com') === -1){
       this.setState({ isValid:false, errorText:'Should be an email from Gmail or Rsrit'});
-    return false;
-  }
+      return false;
+    }
     return true;
   }
 
   handleSubmit = e => {
-    e.preventDefault();   
+    e.preventDefault();  
+    const { username, password } = this.state; 
     if(this.isValid()){
-      console.log(" username : "+this.state.username);
-      console.log(" password : "+this.state.password);
+      this.props.dispatch(loginUser(username, password));
     }  
 };
   static getDerivedStateFromProps(newProps, prevState) {
-    console.log(newProps.result);
-
+    if(newProps.result !== prevState.result){
+      console.log(newProps.result);
+    }    
     return null;
   }
   render(){
