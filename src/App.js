@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 import logo from './logo.svg';
 import { Form, Input, Tooltip, Button, Select, Checkbox, Icon } from "antd";
 import './App.css';
@@ -77,4 +78,9 @@ class App extends React.Component {
   }  
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+      result: state.login.result
+  };
+};
+export default connect(mapStateToProps)(App);

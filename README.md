@@ -1,5 +1,9 @@
 1. Open your VS Code, open a folder where you want your project
+--------------------------------------
+--------------------------------------
 2. Create a new app using Create-react-app redux-sample
+--------------------------------------
+--------------------------------------
 3. Run the app using yarn start, check your browser if the app runs
 --------------------------------------
 --------------------------------------
@@ -37,24 +41,15 @@ c. To use Button refer: https://ant.design/components/button/
 
 
 Note: when we have a form element, if we define a onSubmit function on the form, we can avoid having a onClick function on a Button element, we can use the onSubmit button on the form or we have the onLCick funciotn on the button and avoid onSubmit on the form.
-
 --------------------------------------
 --------------------------------------
-
 12. Reload the app to check the UI, Use your css skills to align the content at the center of the page, horizontally and vertically.
-
-
 --------------------------------------
 --------------------------------------
-
 13. We notice that the UI doesnot look like as in the website as we didnot import the ant dsign css file. add the below line in the src/index.js file
-
 import 'antd/dist/antd.css';
-
-
 --------------------------------------
 --------------------------------------
-
 14. Lets write the css classes to the elements align the Input fields correctly. learn about CSS units before proceeding further. 
 https://www.w3schools.com/cssref/css_units.asp
 
@@ -63,10 +58,8 @@ b. Add padding and margin for Input Fields, by creating css classes for them.
 c. Make sure you knwo the specifity of CSS,(order is inlinestyles > elementId > CssClasses(pseudoclasses) > Elements )
 d. Check the HTML of the browser by inpect element from the Chrome Dev tools
 e. Hit Empty Cache and Hard Reload to see the changes in the browser
-
 --------------------------------------
 --------------------------------------
-
 15.  lets add functionality to our Input fields, create handleSubmit button to get called when we hit the login button, create another function to reset the state for the input fields, lets create a component "state" in the "constructor", in the latest versions of react, we can create "state" with no "constructor" created. 
 
 refer to git commit
@@ -75,31 +68,19 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/37bc5e4b8371a4070faf
 
 --------------------------------------
 --------------------------------------
-
-
 16. Add validation to the Login screen Inptu fields
-
-
 https://codeburst.io/how-to-use-html5-form-validations-with-react-4052eda9a1d4
-
 Refer Formik for another way fo additing validations
 https://jaredpalmer.com/formik/docs/overview?source=post_page-----4052eda9a1d4----------------------
-
-
 --------------------------------------
 --------------------------------------
-
 17. Show Error message for the failed validations
-
     a. create a func component to show the error messages
     b. Add a new state property to show the component
     c. create a conditional statement to show the Error Component.
-
 https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92c83b3baa6460e00a3b04
-
 --------------------------------------
 --------------------------------------
-
 18. REDUX: Now lets start with Redux, since we initally installed the redux dependencies, 
     a. create a redux folder
     b. Create 3 folder inside the redux folder, i. actions ii. reducers iii. store
@@ -156,9 +137,19 @@ https://github.com/sandeepperkariappdev/redux-sample/commit/4a9c6e84cacc16a79b92
     a. In the fetch function in the Sagas file, server response will be dispatched by actions using the types and effects from sagas. the dispatched actions will be consumed in the reducers to update the store. 
     b. Go to the reducers/login.js file to create functions for types, Login Success and Login Error.
     c. Write the handler functions to update the "state" object in the reducers.
+    Note: Make sure we create a new "state" object to return in the functions, if we use the same state object, the component will not get the updated data.
 --------------------------------------
 --------------------------------------   
-26.
+26. INTEGRATE REDUX TO REACT:
+    a. Go to src/index.js file, import provider from the react-redux
+    b. Apply the "provider" component to the App component, Provider will ensure the store is available to all the child components in the App Component.
+    c. Import the "store" from the redux/store/index.js file to apply to the provider.
+    d. Go to the App component, import connect from react-redux
+    e. Now we need to pulll the data from the redux "store" to the component "props", we will write mapStateToProps function to integrate using connect.
+    f. The data that we put in to "props" will be available from the "getDerivedStateFromProps" function.
+--------------------------------------
+--------------------------------------
+27.  
 
 
 
